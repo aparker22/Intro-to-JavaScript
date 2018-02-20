@@ -8,7 +8,7 @@ var printNumbers = function (x, y) {
         num ++;
     }
 };
-
+// 
 printNumbers(1, 10);
 
 // Write two versions of the above function. 
@@ -212,4 +212,62 @@ console.log(matrixMultiply([[2, 4], [3, 4]], [[5, 2], [3, 1]]));
 // A throw can have the values of 'rock', 'paper', or 'scissors'. It will return 'player 1' if player 
 // 1 wins, 'player 2' if player 2 wins, and 'draw' if there is no winner.
 
+var rockPaperScissors = function (x, y) {
+    if (x == 'rock') {
+        if (y == 'scissors') {
+            console.log('Player 1 Wins');
+        } else if (y == 'paper') {
+            console.log('Player 2 Wins');
+        } else if (y == 'rock') {
+            console.log('Draw');
+        }
+    } else if (x == 'paper') {
+        if (y == 'scissors') {
+            console.log('Player 2 Wins');
+        } else if (y == 'paper') {
+            console.log('Draw');
+        } else if (y == 'rock') {
+            console.log('Player 1 Wins');
+        }
+    } else if (x == 'scissors') {
+        if (y == 'scissors') {
+            console.log('Draw');
+        } else if (y == 'paper') {
+            console.log('Player 1 Wins');
+        } else if (y == 'rock') {
+            console.log('Player 2 Wins');
+        }
+    }
+};
 
+rockPaperScissors('paper', 'scissors');
+
+// Write a function ticTacToe which takes a two-dimensional array of size 3x3. Each cell 
+// in the two dimensional array can be one of 'O', 'X', or null. The ticTacToe function will 
+// determine the winner by
+
+// returning 'O' if O makes a row
+// returning 'X' if X makes a row
+// return null if neither makes a row
+
+
+
+var ticTacToe = function (x) {
+    for (var i=0; i < x.length; i++) {
+        if (x[i][0] == x[i][1] && x[i][0] == x[i][2]) {
+            console.log(x[i][0]);
+        } else if (x[0][i] == x[1][i] && x[1][i] == x[2][i]) {
+            console.log(x[0][i]);
+        } else if (x[0][i] == x[1][i+1] && x[1][i+1] == x[2][i+2]) {
+            console.log(x[0][i]);
+        } else if (x[i][2] == x[1][1] && x[1][1] == x[2][0]) {
+            console.log(x[1][i+1]);
+    }
+}
+}
+
+ticTacToe([
+    ['X', 'O', 'O'],
+    [null, 'O', 'X'],
+    ['O', 'X', 'X']
+])
