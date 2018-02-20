@@ -8,7 +8,11 @@ var printNumbers = function (x, y) {
         num ++;
     }
 };
+<<<<<<< HEAD
 // 
+=======
+
+>>>>>>> d28d480e3c57c8e054bfc693f422cd7fd61a10c4
 printNumbers(1, 10);
 
 // Write two versions of the above function. 
@@ -212,6 +216,7 @@ console.log(matrixMultiply([[2, 4], [3, 4]], [[5, 2], [3, 1]]));
 // A throw can have the values of 'rock', 'paper', or 'scissors'. It will return 'player 1' if player 
 // 1 wins, 'player 2' if player 2 wins, and 'draw' if there is no winner.
 
+<<<<<<< HEAD
 var rockPaperScissors = function (x, y) {
     if (x == 'rock') {
         if (y == 'scissors') {
@@ -271,3 +276,6 @@ ticTacToe([
     [null, 'O', 'X'],
     ['O', 'X', 'X']
 ])
+=======
+
+>>>>>>> d28d480e3c57c8e054bfc693f422cd7fd61a10c4
