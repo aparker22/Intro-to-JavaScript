@@ -8,11 +8,7 @@ var printNumbers = function (x, y) {
         num ++;
     }
 };
-<<<<<<< HEAD
-// 
-=======
 
->>>>>>> d28d480e3c57c8e054bfc693f422cd7fd61a10c4
 printNumbers(1, 10);
 
 // Write two versions of the above function. 
@@ -106,6 +102,7 @@ var fixed = '';
 
 var decipher = function (shiftedText, shift1) {
     for (var i = 0; i < shiftedText.length; i++) {
+
         var newChar = shiftedText.charCodeAt(i);
         var shiftChar = newChar + shift1;
         fixed += String.fromCharCode(shiftChar);
@@ -185,14 +182,17 @@ console.log(positiveNumbers([-1, -2, -3]));
 
 
 var matrixAdd = function (matrix1, matrix2) {
-    var newMatrix = [[0, 0], [0, 0]];
-    newMatrix[0][0] = (matrix1[0][0] + matrix2[0][0]);
-    newMatrix[0][1] = (matrix1[0][1] + matrix2[0][1]);
-    newMatrix[1][0] = (matrix1[1][0] + matrix2[1][0]);
-    newMatrix[1][1] = (matrix1[1][1] + matrix2[1][1]);
-
+    var newMatrix = [];
+    for (var i = 0; i < matrix1.length; i++) {
+        newMatrix[i] = [];
+        for (var j=0; j < matrix1[0].length; j++) {
+            var cell1 = matrix1[i][j]
+            var cell2 = matrix2[i][j]
+            newMatrix[i].push(cell1 + cell2);
+        }
+    }
     return newMatrix;
-};
+}
 
 console.log(matrixAdd([[1, 3], [2, 4]], [[5, 2], [1, 0]]));
 
@@ -216,7 +216,6 @@ console.log(matrixMultiply([[2, 4], [3, 4]], [[5, 2], [3, 1]]));
 // A throw can have the values of 'rock', 'paper', or 'scissors'. It will return 'player 1' if player 
 // 1 wins, 'player 2' if player 2 wins, and 'draw' if there is no winner.
 
-<<<<<<< HEAD
 var rockPaperScissors = function (x, y) {
     if (x == 'rock') {
         if (y == 'scissors') {
@@ -269,13 +268,10 @@ var ticTacToe = function (x) {
             console.log(x[1][i+1]);
     }
 }
-}
+};
 
 ticTacToe([
     ['X', 'O', 'O'],
     [null, 'O', 'X'],
     ['O', 'X', 'X']
-])
-=======
-
->>>>>>> d28d480e3c57c8e054bfc693f422cd7fd61a10c4
+]);
