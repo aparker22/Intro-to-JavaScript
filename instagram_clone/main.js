@@ -17,17 +17,14 @@ var pictures = function(x) {
 };
 pictures(images); //runs previous function
 
-function showImage(imgName) {
-    var curImage = document.getElementById('currentImg');
-    var thePath = '';
-    var theSource = thePath + imgName;
-}
 
-var main = document.querySelector('.main');
+
+var main = document.getElementById('currentImg');
 
 //define function for what will happen on mouse click
-var alert = function (e) {}
-    showImage(x);
+var alert = function (e) {
+    var img = this.getAttribute("src");
+    main.setAttribute("src", img);
 }
 
 //use loop to add mouseclick function to each image in array
